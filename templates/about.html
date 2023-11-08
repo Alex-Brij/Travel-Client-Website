@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='web_stylesheet.css') }}">
+        <title>ABOUT</title>
+    </head>
+
+    {% block page_content %}
+
+    <div>
+        <img id="background" src="{{ url_for('static', filename='images/' + 'Georgia- front2.jpg') }}" style="width:100%">
+
+
+
+        <div class="text-overlay">
+            <p class="text2" style="margin: 10px 20px; text-align: center;">                
+                I started my travel representation company RB Reps in 2007, after having worked in travel and wildlife camps for 25 years. 
+                I now have the pleasure and the privilege of living in Dartmoor National Park in Devon, UK. RB Reps represents DMC's/Ground Operators 
+                in Oman, Georgia, Jordan & UAE, Mongolia, Egypt and India and offers their services on the ground to Tour Operators in the UK, USA & 
+                Canada. All the DMC's are very well established, belong to international associations and work with extremely well known Tour Operators. 
+                The dmc's I represent, are professional and innovative and share a passion for curating excellent and unique travel experiences for 
+                clients who journey with us through these wonderful destinations.  Between the 7 companies they handle FIT's, Groups, Special Interest 
+                travel, Cruise ships and Private Jets. Several of the companies are Associate Members of USTOA. Between them they attend major trade 
+                shows like WTM, ITB, ATM, USTOA, ATTA. I undertake sales trips on their behalf regularly in the UK and 4 times a year to the USA & Canada.
+            </p>
+        </div>
+
+    </div>
+
+
+    {% endblock %}
+
+</html>

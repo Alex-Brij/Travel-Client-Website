@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='web_stylesheet.css') }}">
+        <title>RECOMMENDS</title>
+    </head>
+
+    {% block page_content %}
+
+         <a class="button-style" href="{{company.link}}" target="blank">{{company.country}}: {{company.name}}</a>
+
+
+        <div class="container">
+            <div class="left"><img src="{{ url_for('static', filename='images/' + company.image_grid)}}"></div>
+            
+            <div class="right">{{company.description}}</div>
+        </div> 
+     
+        <br>
+        <br>
+
+    {% endblock %}
+
+</html>

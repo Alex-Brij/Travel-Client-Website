@@ -1,0 +1,313 @@
+/* GENERAL */
+
+body {
+    font-family: 'Segoe UI';
+    margin: 0px 0px 0px 0px;
+}
+
+p {
+  padding: 0px 15px;
+  font-size: large;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: rgb(70, 16, 97);
+  font-weight: bold;
+  font-size: large;
+  /* width: 100%; */
+  /* position: sticky;
+  left: 0;
+  bottom: 0;
+  z-index: 60; */
+}
+
+
+
+/* REPRESENTS/RECCOMENDS PAGE */
+
+/* overall container holding image grids and company descriptions */
+.container {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  /* border: solid 1px; */
+}
+
+/* styling of image grid */
+.left {
+  padding-right: 20px;
+}
+
+/* styling of company description */
+.right {
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 19px;
+  margin-right: 10px;
+}
+
+
+
+/* NAVBAR */
+
+/* keeps navbar at top of screen and gives shadow */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 250;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* gives navbar list its overall characterstics and position*/
+ul {
+  list-style-type: none;
+  margin: 0px 0px 16px 0px;
+  padding: 0px 0px;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-size: 150%;
+  font-weight: 600;
+}
+
+/* all navbar elements stay left */
+li {
+  float: left;
+}
+
+/* any nav elements characteristics */
+li a, .nav-dropdowns {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 32px;
+  text-decoration: none;
+}
+
+/* background colour of nav elements when being hovered over or when there dropdown menu is hovered over  */
+li a:hover, .dropdown:hover .nav-dropdowns {
+  background-color: rgb(217, 217, 217);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+/* style, colour, size of dropdown menu (when no hover) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* dropdown elements text */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* background colour of dropdown elements when hovered over */
+.dropdown-content a:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* positioning of logo */
+#logo {
+  margin: -9px -45px -17px -65px;
+  padding: 0px 0px 0px 0px;
+  pointer-events: none;
+
+}
+
+
+
+/* NAVBAR ARROW */
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.dropdown:hover .arrow{
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+
+
+
+.caption {
+  text-align: center;
+  padding: -10px 20px;
+  /* border: solid;
+  border-width: 0px 1px 1px 1px; */
+}
+
+
+
+/* PHOTO GRID RAHUL PAGE */
+
+.rowR {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.columnR {
+  flex: 33%;
+  max-width: 32%;
+  padding: 0 10px;
+}
+
+.columnR img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+.button-style {
+  /* background-color: #f7f7f7; */
+  border: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  color: rgb(0, 0, 0);
+  padding: 2px 8px;
+  text-decoration: none;
+  font-size: 24px;
+  /* margin: 4px 2px; */
+  margin-left: 20px;
+  /* padding-bottom: 20px; */
+  cursor: pointer;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+
+}
+
+.button-style:hover {
+  font-weight: 500;
+  color: rgb(70, 16, 97);
+}
+
+.text {
+  text-align: justify; 
+  text-justify: inter-word; 
+  font-weight: 400;
+}
+
+.text2 {
+  text-align: justify; 
+  text-justify: inter-word; 
+  font-weight: 450;
+  color: #000;
+  font-size: 20px;
+  padding: 40px 250px;
+}
+
+
+.picture {
+  /* object-fit: contain; */
+}
+
+
+
+
+/* SLIDESHOW */
+
+#stage {
+  /* width: 1920px; */
+  /* height: 866px; */
+  height: 680px;
+  margin-top: -20px;
+}
+
+#stage img {
+  position: absolute;
+  /* filter: blur(3px); */
+}
+
+#stage img:nth-of-type(1) {
+  animation-name: fader;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  z-index: 20;
+}
+#stage img:nth-of-type(2) {
+  z-index: 10;
+}
+#stage img:nth-of-type(n+3) {
+  display: none;
+}
+
+@keyframes fader {
+  from { opacity: 1.0; }
+  to   { opacity: 0.0; }
+}
+
+.text-overlay {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  bottom: 80%;
+  width: 100%;
+  color: white;
+  /* padding: 10px; */
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 201; /* Above the image */
+}
+
+#Main-tittle{
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: segoe UI;
+  font-size: 80px;
+  font-weight: 500;
+  margin-bottom: -30px;
+  color: rgb(255, 255, 255);
+}
+
+#Sub-tittle{
+  font-family: segoe UI;
+  font-size: 32px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+#background{
+  margin-top: -15px;
+  opacity: 30%;
+  height: 565px;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100.4%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+  z-index: 201; /* Place the overlay above the image */
+
+}

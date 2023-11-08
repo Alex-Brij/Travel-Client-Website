@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='web_stylesheet.css') }}">
+        <title>RAHUL</title>
+    </head>
+
+    {% block page_content %}
+
+        <!-- <img src="{{ url_for('static', filename='Rahul.png') }}" width="99%"> -->
+
+        <div class="rowR">
+
+            <div class="columnR">
+                <img src="{{ url_for('static', filename='images/' + 'Rahul- Jordan cropped.jpg') }}">
+                <p class="caption">Wadi Rum: Jordan</p>
+
+            </div>
+
+            <div class="columnR">
+                <img src="{{ url_for('static', filename='images/' + 'Rahul- Ladak cropped.jpg') }}">
+                <p class="caption">Ladakh: India</p>
+
+            </div>
+
+            <div class="columnR">
+                <p class="text" style="margin-top: 5px;">
+                    I grew up in the fascinating city of Calcutta in India and schooled between the desert and mountains. After a brief stint 
+                    in university I spent a year with my uncle, the famous tiger man, Billy Arjan Singh, in Dudhwa National Park, who was rehabilitating 
+                    leopards and a tiger into the jungle. A 6 week visit to Tiger Tops in the Royal Chitawan National turned into 9 years working for the 
+                    famous Tiger Tops group of companies and included exciting projects like building the first private jungle camp in Bandhavgarh in 1984, 
+                    visiting Russia in search of tigers and working for a summer in the Amazon & Galapagos. My wonderful years in Nepal culminated in 
+                    running the Tiger Tops operation as Chief Naturalist as well as serving as Dr Chuck McDougal's principal research assistant on a long 
+                    term tiger monitoring project. The next chapter was 7 years criss-crossing the Soviet Union setting up the Travel Russia dmc 
+                    and working for Steppes Travel in the UK. A further 7 years was spent in more mainstream travel running sales & representation offices 
+                    across the world as the Director Sales for Cox & Kings. In 2007 I started RB Reps and now live in a beautiful remote National Park called 
+                    Dartmoor in the depths of rural Devon in England with my lovely wife and 2 wonderful sons.
+                    <br>
+                    <br>
+                    <br>
+                    Website designed by Alex Brijnath.
+                </p>
+            </div>
+
+        </div>
+        
+
+
+    {% endblock %}
+
+</html>

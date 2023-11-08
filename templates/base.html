@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='web_stylesheet.css') }}">
+        <title>Base</title>
+    </head>
+
+    <nav>
+        <ul>
+            <li id="logo"><a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/' + 'logo.png') }}" height="35%" width="35%"></a></li>
+
+            <li><a href="{{ url_for('home') }}">HOME</a></li>
+
+            <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+
+            <li class="dropdown">
+                <a class="nav-dropdowns">REPRESENTS<i class="arrow"></i></a>
+                    <div class="dropdown-content">
+                        {% for company in companies_represents %}
+                            <a href="{{ url_for('represents', type=company.name) }}">{{company.name}}</a>
+                        {% endfor %}
+                    </div>
+            </li>
+
+            <li class="dropdown">                
+                <a class="nav-dropdowns">RECOMMENDS<i class="arrow"></i></a>
+                    <div class="dropdown-content">
+                        {% for company in companies_recommends %}
+                            <a href="{{ url_for('recommends', type=company.name) }}">{{company.name}}</a>
+                        {% endfor %}
+                    </div>
+            </li>
+
+            <li><a href="{{ url_for('rahul') }}">RAHUL BRIJNATH</a></li>
+
+        </ul>
+    </nav>
+
+
+
+{% block content %}
+    <div>
+        {% block page_content %}{% endblock %}
+    </div>
+{% endblock %}
+
+    <footer>
+        <p>RB Reps, Ninestone, South Zeal, Okehampton, Devon, EX20 2PZ, UK</p>
+        <p>Telephone: (44) 1837 849157  |  Mobile: (44) 7918 716181  |  Email: rahul@rbreps.com  |  LinkedIn: <a href="https://www.linkedin.com/in/rahul-brijnath-2829695/" target="blank">Rahul Brijnath</a></p>
+    </footer>
+
+
+
+</html>
